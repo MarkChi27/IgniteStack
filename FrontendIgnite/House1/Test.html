@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+<div id="app">
+
+  <el-collapse v-model="activeNames" @change="handleChange">
+    <el-collapse-item title="Number of Washrooms" name="1">
+      <h3 style="color:rgb(0, 174, 255)">There are two luxurous washrooms in this house:</h3>
+      <img src="WashRoom1.jpeg" width="460" height="345">
+      <img src="WashRoom2.jpeg" width="460" height="345" style="float:none">
+    </el-collapse-item>
+
+
+    <el-collapse-item title="Number of Bedrooms" name="2">
+      <h3 style="color:rgb(0, 174, 255)">Four beautiful bedrooms built into this house:</h3>
+      <img src="Bedroom1.jpeg" width="225.4" height="169.05">
+      <img src="Bedroom2.jpeg" width="225.4" height="169.05">
+      <img src="Bedroom3.jpeg" width="225.4" height="169.05">
+      <img src="Bedroom4.jpeg" width="225.4" height="169.05">
+    </el-collapse-item>
+
+
+    <el-collapse-item title="Decorations" name="3">
+      <h3 style="color:rgb(0, 174, 255)">Very modern decoration around the house, great for young people:</h3>
+      <img src="LivingRoom1.jpeg" width="368" height="276">
+      <img src="LivingRoom2.jpeg" width="368" height="276">
+      <img src="LivingRoom3.jpeg" width="368" height="276">
+    
+
+    </el-collapse-item>
+
+
+    <el-collapse-item title="Transportation Nearby" name="4">
+      <div>Go Train Station: 2.8km away, around 7 min walk</div>
+      <div>Metro Station：1.7km, 3min walk</div>
+    </el-collapse-item>
+  </el-collapse>
+
+
+  <h1 style="color:rgb(0, 174, 255)">Rent fee: 8500/month</h3>
+
+
+  <script>
+    export default {
+      data() {
+        return {
+          activeNames: ['1']
+        };
+      },
+      methods: {
+        handleChange(val) {
+          console.log(val);
+        }
+      }
+    }
+  </script>
+
+
+
+
+
+
+
+<script>
+  export default {
+    methods: {
+      handleOpen(key, keyPath) {
+        console.log(key, keyPath);
+      },
+      handleClose(key, keyPath) {
+        console.log(key, keyPath);
+      }
+    }
+  }
+</script>
+  
+</div>
+</body>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+  <script>
+    new Vue({
+      el: '#app',
+    })
+  </script>
+</html>
